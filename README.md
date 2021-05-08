@@ -1,2 +1,2 @@
-# mathematics
-my awesome mathematics (test, cheat sheets, etc.)
+# I love mathematics
+Here my awesome mathematics things - test, cheat sheets, etc.
