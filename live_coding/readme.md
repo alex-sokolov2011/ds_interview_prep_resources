@@ -9,6 +9,6 @@
 
 Цель этого [ноутбука](https://nbviewer.org/github/alex-sokolov2011/ds_interview_prep_resources/blob/main/live_coding/live_coding.ipynb) - помочь вам лучше подготовиться к собеседованиям с live coding, дать понимание типов задач, которые могут быть заданы, и предложить эффективные методы их решения. Независимо от того, являетесь ли вы начинающим или опытным специалистом, я надеюсь, что найдете здесь что-то полезное для себя.
 
-Удачи в подготовке и на собеседованиях!
+**Удачи в подготовке и на собеседованиях!**
 
 [ссылка на просмотр в специальном браузере](https://nbviewer.org/github/alex-sokolov2011/ds_interview_prep_resources/blob/main/live_coding/live_coding.ipynb)
