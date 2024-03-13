@@ -9,6 +9,8 @@ This repository contains resources for data science interview preparation. Insid
 
 For those preparing for data science roles, this repository aims to provide a comprehensive set of materials to help you succeed in your interviews.
 
+Do you want to view notebooks correctly and interact with them online without any hassle? Then use [mybinder](https://mybinder.org/repo/alex-sokolov2011/ds_interview_prep_resources)
+
 ---
 
 # Ресурсы для подготовки к интервью по Data Science
@@ -21,3 +23,5 @@ For those preparing for data science roles, this repository aims to provide a co
 - разбор задач собеседований и их аналогов на LeetCode
 
 Для тех, кто готовится к ролям в области data science, этот репозиторий предоставляет всеобъемлющий набор материалов, чтобы помочь вам успешно пройти интервью.
+
+Хотите, посмотреть корректные отображение ноутбуков и все протыкать онлайн не отходя от кассы? Тогда воспользуйтесь [mybinder](https://mybinder.org/repo/alex-sokolov2011/ds_interview_prep_resources)
