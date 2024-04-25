@@ -1,0 +1,13 @@
+push 3
+push 14
+size
+clear
+push 1
+front
+push 2
+front
+pop
+size
+pop
+size
+exit
