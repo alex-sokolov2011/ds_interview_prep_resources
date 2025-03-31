@@ -1,0 +1,2 @@
+topic_id,question_text,difficulty_level,link,created_at
+1,В чем разница между UNION и UNION ALL?,1,https://postgrespro.ru/docs/postgresql/14/queries-union,2025-03-15 00:00:00
