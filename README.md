@@ -1,27 +1,29 @@
-# DS Interview Prep Resources
+# 🧠 DS Interview Prep Resources
 
-This repository contains resources for data science interview preparation. Inside, you'll find:
+This repository contains resources for preparing for Data Science interviews — from theory to hands-on coding.
+
+Inside, you'll find:
 - test assignments
-- math, linear algebra and probability theory problems
-- logic problems
-- live coding examples
-- leetcode problem breakdowns
+- math, linear algebra, and probability theory problems
+- logic puzzles
+- Python live coding tasks
+- SQL exercises and interactive interview trainer
+- LeetCode-style problems with explanations
 
-For those preparing for data science roles, this repository aims to provide a comprehensive set of materials to help you succeed in your interviews.
-
-Do you want to view notebooks correctly and interact with them online without any hassle? Then use [mybinder](https://mybinder.org/repo/alex-sokolov2011/ds_interview_prep_resources)
+🧪 Notebooks can be viewed and launched online using [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/alex-sokolov2011/ds_interview_prep_resources/HEAD)
 
 ---
 
-# Ресурсы для подготовки к интервью по Data Science
+# 📚 Ресурсы для подготовки к интервью по Data Science
 
-Этот репозиторий содержит материалы для подготовки к интервью по направлению data science:
+Этот репозиторий — всё, что нужно для подготовки к собеседованиям на позиции в области Data Science.
+
+Что внутри:
 - тестовые задания
-- задачи по математике, теории вероятностей и линейной алгебре
-- задачи на логику
-- примеры live coding с собеседований на Python
-- разбор задач собеседований и их аналогов на LeetCode
+- задачи по математике, линейной алгебре и теории вероятностей
+- логические задачи
+- практические задания по Python с собеседований
+- интерактивные SQL-упражнения и тренажёр с вопросами
+- задачи в стиле LeetCode с разбором решений
 
-Для тех, кто готовится к ролям в области data science, этот репозиторий предоставляет всеобъемлющий набор материалов, чтобы помочь вам успешно пройти интервью.
-
-Хотите, посмотреть корректные отображение ноутбуков и все протыкать онлайн не отходя от кассы? Тогда воспользуйтесь [mybinder](https://mybinder.org/repo/alex-sokolov2011/ds_interview_prep_resources)
+🚀 Хотите посмотреть ноутбуки прямо в браузере и запустить их без установки? Используйте [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/alex-sokolov2011/ds_interview_prep_resources/HEAD)
