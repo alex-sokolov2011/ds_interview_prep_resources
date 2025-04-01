@@ -7,8 +7,12 @@ PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -f ./data/
 
 echo "-- Шаг 2: Импорт данных в таблицы из файлов CSV..."
 PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -c "\copy topic FROM './data/topics.csv' DELIMITER ',' CSV HEADER;"
-PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -c "\copy question(topic_id, question_text, difficulty_level, link, created_at) FROM './data/questions.csv' DELIMITER ',' CSV HEADER;"
-PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -c "\copy answer(question_id, answer_text, is_correct) FROM './data/answers.csv' DELIMITER ',' CSV HEADER;"
+PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -c "\copy question(question_id, topic_id, question_text, difficulty_level, link) FROM './data/questions.csv' DELIMITER ',' CSV HEADER;"
+PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -c "\copy answer(answer_id, question_id, answer_text, is_correct) FROM './data/answers.csv' DELIMITER ',' CSV HEADER;"
+
+PGPASSWORD=admin psql -q -U admin -d interview_sql_postgres -h localhost -c "SELECT setval('question_question_id_seq', (SELECT MAX(question_id) FROM question));" > /dev/null 2>&1
+PGPASSWORD=admin psql -q -U admin -d interview_sql_postgres -h localhost -c "SELECT setval('answer_answer_id_seq', (SELECT MAX(answer_id) FROM answer));" > /dev/null 2>&1
+
 
 echo "-- Шаг 3: Проверка правильности создания базы данных..."
 PGPASSWORD=admin psql -U admin -d interview_sql_postgres -h localhost -c "\dt+"

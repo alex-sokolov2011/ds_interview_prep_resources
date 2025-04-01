@@ -1,2 +1,306 @@
-topic_id,question_text,difficulty_level,link,created_at
-1,В чем разница между UNION и UNION ALL?,1,https://postgrespro.ru/docs/postgresql/14/queries-union,2025-03-15 00:00:00
+question_id,topic_id,question_text,difficulty_level,link
+1,1,В чем разница между UNION и UNION ALL?,1,https://postgrespro.ru/docs/postgresql/14/queries-union
+2,1,Какой оператор имеет больший приоритет AND или OR (если они используются совместно)?,1,https://postgrespro.ru/docs/postgresql/14/sql-syntax-lexical#SQL-PRECEDENCE-TABLE
+4,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| null |   1   |
+|  2   |   2   |
+|  5   |  null |
+| null |  null |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(*)
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+6,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| null |   1   |
+|  2   |   2   |
+|  5   |  null |
+| null |  null |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(1)
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+7,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| null |   1   |
+|  2   |   2   |
+|  5   |  null |
+| null |  null |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(id1)
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+9,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| null |   1   |
+|  2   |   2   |
+|  5   |  null |
+| null |  null |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT('id1')
+и почему?
+",1,https://oracleplsql.ru/count-postgresql.html
+10,1,"Дана таблица 
+| id1  | ""id2"" |
+| ---- |  ---- |
+| null |   1   |
+|  2   |   2   |
+|  5   |  null |
+| null |  null |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(""id2"")
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+11,1,"Дана таблица 
+| id1  | ""id2"" |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(NULL)
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+12,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(DISTINCT id1)
+и почему?
+",1,https://oracleplsql.ru/count-postgresql.html
+13,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |   1   |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT COUNT(DISTINCT id1, id2)
+и почему?
+",2,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+14,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT SUM(1)
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+15,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT SUM(id1)
+и почему?
+",1,https://oracleplsql.ru/sum-postgresql.html
+16,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT SUM(id1 + id2)
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-aggregate#FUNCTIONS-AGGREGATE-TABLE
+17,1,"Дана таблица 
+| id1  | ""id2"" |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT SUM(""id2"")
+и почему?
+",1,https://postgrespro.ru/docs/postgresql/14/sql-syntax-lexical#SQL-SYNTAX-IDENTIFIERS
+18,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT SUM(id1, id2)
+и почему?
+",2,https://postgrespro.ru/docs/postgresql/14/tutorial-agg
+19,1,"Дана таблица 
+| id1  |  id2  |
+| ---- |  ---- |
+| NULL |   1   |
+|  2   |   2   |
+|  5   |  NULL |
+| NULL |  NULL |
+|  2   |   2   |
+|  2   |   3   |
+
+Что выведет запрос? 
+SELECT SUM(DISTINCT id1, id2)
+и почему?
+",2,https://postgrespro.ru/docs/postgresql/14/tutorial-agg
+20,1,"Перечислите порядок выполнения операторов в простом (основном) запросе
+",1,https://dzen.ru/a/Zddebm6jwDrtPfev
+21,8,"Что такое ограничения (constraints) в PostgreSQL и зачем они нужны?
+",1,https://postgrespro.ru/docs/postgresql/14/ddl-constraints
+22,4,"Ты работаешь в команде Data Science, и в базе лежит таблица с билетами от агентства. Таблица огромная — десятки миллионов записей, и данные постоянно загружаются.
+Однажды датасаентист жалуется: ""Модель по прогнозу цен начала сбоить, кажется, у нас появились дубликаты билетов""
+Твоя задача — найти и удалить дубликаты, но сделать это так, чтобы:
+✅ Не положить базу
+✅ Оставить только одну копию каждого билета
+✅ Отчёт о дублях отправить агентству
+Какой SQL-запрос ты выберешь и почему?
+",3,https://postgrespro.ru/docs/postgresql/14/functions-window
+23,8,"Допустим, у тебя есть две таблицы: `flights` с информацией о рейсах и `bookings`, где хранятся бронирования.
+Как сделать так, чтобы в `bookings` не могли появиться бронирования на несуществующие рейсы?
+",3,https://postgrespro.ru/docs/postgresql/14/ddl-constraints#DDL-CONSTRAINTS-FK
+24,1,"В таблице topics пять записей:
+
+| id  | topic                             |
+| --- | --------------------------------- |
+| 1   | Data cleaning in Machine Learning |
+| 2   | MLOps for Data Engineer           |
+| 3   | Data Analysis                     |
+| 4   | Big Data                          |
+| 5   | Data Science                      |
+
+Какое количество строк вернёт запрос:
+SELECT * 
+  FROM topics 
+ WHERE topic LIKE 'Data'
+",1,https://postgrespro.ru/docs/postgresql/14/functions-matching#FUNCTIONS-LIKE
+25,8,"Как в PostgreSQL однозначно идентифицировать каждую строку в таблице?
+",2,https://postgrespro.ru/docs/postgresql/14/ddl-constraints#DDL-CONSTRAINTS-PRIMARY-KEYS
+26,14,"У нас есть таблица report_questions:
+| topic_id | difficulty_level | question_count |
+| -------- | ---------------- | -------------- |
+| 1        | 1                | 15             |
+| 1        | 2                | 3              |
+| 4        | 3                | 1              |
+| 8        | 1                | 2              |
+| 8        | 2                | 1              |
+
+поле question_count показывает количество вопросов для каждой темы и уровня сложности. Нужно написать запрос, который добавит нарастающий итог для количества вопросов, отсортированный по теме и сложности по возрастанию.
+",3,https://postgrespro.ru/docs/postgresql/14/tutorial-window
+27,3,"Если в LEFT JOIN поменять местами таблицы A и B (они разные), изменится ли результат?
+",3,https://postgrespro.ru/docs/postgresql/14/queries-table-expressions#QUERIES-JOIN
+28,3,"Если в INNER JOIN поменять местами таблицы A и B (они разные), изменится ли результат?
+",3,https://postgrespro.ru/docs/postgresql/14/queries-table-expressions#QUERIES-JOIN
+29,3,"Результат выполнения запросов с использованием JOIN считаются эквивалентным, если:
+1. Количество столбцов и строк в результирующих наборах совпадает.
+2. Одна таблица может быть приведена в полное соответствие другой путём перестановки строк и/или столбцов (но без изменения самих данных)
+Какие из следующих наборов утверждений верны?
+",3,https://postgrespro.ru/docs/postgresql/14/queries-table-expressions#QUERIES-JOIN
+30,2,"Какие бывают подзапросы в PostgreSQL?
+",3,https://postgrespro.ru/docs/postgresql/14/sql-expressions#SQL-SYNTAX-SCALAR-SUBQUERIES
+31,3,"Как оптимизировать JOIN, если одна таблица очень большая, а другая маленькая?
+",4,https://postgrespro.ru/docs/postgresql/14/queries-table-expressions#QUERIES-JOIN
+32,4,"Что такое составной индекс и зачем он нужен?
+",3,https://postgrespro.ru/docs/postgresql/14/indexes-multicolumn
+33,4,"Ты работаешь над агрегатором авиабилетов, где в таблице миллионы строк.
+
+Самый частый запрос выглядит так:
+
+SELECT *
+  FROM trip
+ WHERE town_from = 'Antalya'
+   AND time_out >= '2025-03-01 00:00:00'
+   AND time_out < '2025-03-02 00:00:00';
+
+Но база жутко тормозит, и пора оптимизировать этот запрос с помощью составного индекса.
+
+Какой тип индекса (B-tree, GiST, GIN, BRIN) выбрать? В какой последовательности индексировать столбцы? И стоит ли поменять порядок условий в WHERE?
+",4,https://postgrespro.ru/docs/postgresql/14/indexes-multicolumn
+34,6,"Что такое CTE в PostgreSQL, и зачем его использовать?
+",2,https://postgrespro.ru/docs/postgresql/14/queries-with
+35,12,"Что такое EXPLAIN в PostgreSQL, и зачем его использовать?
+",2,https://postgrespro.ru/docs/postgresql/14/sql-explain
+36,3,"Какие есть алгоритмы (физические способы выполнения) соединений JOIN в PostgreSQL, и как они работают?
+",3,https://habr.com/ru/articles/883916/
+37,1,"Что вернёт COALESCE(NULL, NULL), и в каких случаях стоит использовать эту функцию в PostgreSQL?
+",1,https://postgrespro.ru/docs/postgresql/14/functions-conditional#FUNCTIONS-COALESCE-NVL-IFNULL
+38,4,"Допустим, у нас есть база данных авиакомпании, где информация о рейсах и аэропортах хранится так:
+
+CREATE TABLE airports (
+    id SERIAL PRIMARY KEY,
+    name TEXT,
+    code TEXT UNIQUE
+);
+
+CREATE TABLE flights (
+    id SERIAL PRIMARY KEY,
+    departure_airport_id INT REFERENCES airports(id),
+    arrival_airport_id INT REFERENCES airports(id),
+    flight_time INTERVAL
+);
+
+Чтобы узнать, из какого и в какой аэропорт летит рейс, нам нужно делать JOIN:
+
+SELECT f.id, a1.name AS departure, a2.name AS arrival, f.flight_time
+FROM flights f
+JOIN airports a1 ON f.departure_airport_id = a1.id
+JOIN airports a2 ON f.arrival_airport_id = a2.id;
+
+Но у нас миллионы рейсов, пользователи постоянно ищут билеты, и JOIN замедляет работу. Чтобы ускорить запросы, мы решили добавить в таблицу flights названия аэропортов и хранить их прямо в этой таблице:
+
+Теперь, когда добавляется новый рейс, мы сразу записываем названия аэропортов и можем получать данные без JOIN.
+
+Как называется этот метод? В каких случаях его используют, и в чём его плюсы и минусы?
+",3,https://habr.com/ru/articles/64524/
+39,12,"Как понять по EXPLAIN ANALYZE, материализовался ли CTE или PostgreSQL заинлайнил его? Что в плане искать?
+",5,https://postgrespro.ru/docs/postgresql/14/queries-with
+40,4,"Чем MATERIALIZED VIEW отличается от обычного VIEW? Какие плюсы-минусы, и что будет, если его не обновить после изменения данных?
+",3,https://postgrespro.ru/docs/postgresql/14/sql-creatematerializedview
+41,12,"Представьте, что SQL-запрос в PostgreSQL работает слишком медленно. Опишите шаги, которые вы предпримете, чтобы отладить его выполнение и выяснить причину медлительности
+",4,https://postgrespro.ru/docs/postgresql/14/using-explain
+43,4,"Ты работаешь в команде DS, активно катаете модели в прод через A/B, всё на PostgreSQL. Часто нужно найти юзеров из группы A, которые не попали в B — сейчас это делается через EXCEPT. Но с ростом нагрузки EXCEPT стал тормозить, и EXPLAIN ANALYZE это подтверждает.
+Вопросы:
+1. Чем заменить EXCEPT, чтобы получить ту же логику, но быстрее?  
+2. Почему EXCEPT тормозит на больших данных?  
+3. Почему в проде его часто вообще запрещают?
+",4,https://postgrespro.ru/docs/postgresql/14/sql-select#SQL-EXCEPT
