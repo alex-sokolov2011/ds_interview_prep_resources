@@ -36,6 +36,7 @@ CREATE TABLE user_statistics (
     question_id INT NOT NULL REFERENCES question(question_id) ON DELETE CASCADE,
     attempts INT DEFAULT 0,              -- Количество попыток
     correct_attempts INT DEFAULT 0,      -- Количество правильных ответов
+    incorrect_attempts INTEGER DEFAULT 0, -- Количество неправильных ответов
     last_attempt TIMESTAMP DEFAULT NOW(), -- Дата последней попытки
     PRIMARY KEY (user_id, question_id)   -- Уникальный ключ по пользователю и вопросу
 );
