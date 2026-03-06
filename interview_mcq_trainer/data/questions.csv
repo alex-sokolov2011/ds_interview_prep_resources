@@ -1,0 +1,320 @@
+"question_id","topic_id","question_text","difficulty_level","link"
+"1","1","Какой тип будет у переменной после выполнения кода `x = 5 / 2` в Python 3?","1","https://docs.python.org/3/tutorial/introduction.html#numbers"
+"2","1","Чем `is` отличается от `==` в Python и в каких случаях результат может отличаться?","2","https://docs.python.org/3/reference/expressions.html#is"
+"3","1","Что выведет следующий код и почему? 
+def func(x=[]):
+    x.append(1)
+    return x
+print(func())
+print(func())","3","https://docs.python.org/3/reference/compound_stmts.html#function-definitions"
+"4","1","Что произойдёт при выполнении кода и почему? 
+x = 10
+def outer():
+    x = 20
+    def inner():
+        print(x)
+    inner()
+outer()","3","https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces"
+"5","1","Что произойдёт при выполнении следующего кода и почему? 
+x = [[]] * 3
+x[0].append(1)
+print(x)","3","https://docs.python.org/3/faq/programming.html#why-did-changing-list-y-also-change-list-x"
+"6","1","Что делает конструкция 
+with open('file.txt', 'w') as f:
+    f.write('data') 
+и в чём её преимущество перед обычным `open` и `close`?","3","https://docs.python.org/3/reference/compound_stmts.html#with"
+"7","1","Что произойдёт при выполнении этого кода и почему? 
+d = {}
+d[[]] = 'value'","3","https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+"8","1","Что произойдёт при выполнении следующего кода? 
+def gen():
+    yield 1
+    yield 2
+    return 3
+for x in gen():
+    print(x)","3","https://docs.python.org/3/reference/simple_stmts.html#the-yield-statement"
+"9","1","Какой результат вернёт второй вызов функции, и почему?
+def add_element(item, my_list=[]):
+	my_list.append(item)
+	return my_list
+
+add_element(1)
+print(add_element(2))
+","3","https://docs.python.org/3/tutorial/controlflow.html#default-argument-values"
+"10","1","Рассмотрим следующий код:
+
+def process_data(data):
+    new_data = []
+    for item in data:
+        if isinstance(item, int) and item > 0:
+            new_data.append(item * 2)
+        elif isinstance(item, str):
+            new_data.append(item.upper())
+        else:
+            new_data.append(None)
+    return new_data
+
+Каким будет результат вызова process_data([1, 'hello', -3, 5.0, 'world']) и почему?","3","https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+"11","1","Рассмотрим следующий Python код. 
+Каким будет результат выполнения и почему?
+def process_data(data_list):
+    data_list.append('processed')
+    data_list = ['new', 'list']
+
+my_data = ['initial']
+process_data(my_data)
+print(my_data)","3","https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference"
+"12","1","Рассмотрим следующий Python код. 
+Каким будет результат выполнения и почему?
+def update_tuple_with_list(t):
+    t[0].append(4)
+    t = (1, 2, 3)
+
+my_tuple = ([1, 2, 3], 'a', 'b')
+update_tuple_with_list(my_tuple)
+print(my_tuple)","4","https://docs.python.org/3/reference/datamodel.html"
+"13","1","Что будет выведено и почему? 
+x = 10
+def func():
+    print(x)
+func()","3","https://docs.python.org/3/faq/programming.html#why-am-i-getting-an-unboundlocalerror-when-the-variable-has-a-value"
+"14","1","Рассмотрим следующий Python код. 
+Каким будет результат выполнения и почему?
+import copy
+
+def complex_mutation(data):
+    data[0]['nested_list'].append(4)
+    data[1] = 'changed'
+    data = copy.deepcopy(data)
+    data[0]['nested_list'].append(5)
+
+original_data = [{'nested_list': [1, 2, 3]}, 'initial_string']
+complex_mutation(original_data)
+print(original_data)","3","https://docs.python.org/3/faq/programming.html#why-am-i-getting-an-unboundlocalerror-when-the-variable-has-a-value"
+"15","1","Рассмотрим следующий код:
+def modify_list(data_list):
+    data_list.append(4)
+
+my_list = [1, 2, 3]
+modify_list(my_list)
+print(my_list)
+
+
+Какой будет вывод этого кода, и почему именно такой результат получается с точки зрения передачи аргументов в функции Python?","3","https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference"
+"16","1","Что напечатает следующий код и почему?
+def stateful_counter(start=0):
+    count = start
+    while True:
+        inc = yield count
+        count = count + 1 if inc is None else inc
+
+c = stateful_counter()
+print(next(c))
+print(c.send(5))
+print(next(c))","4","https://docs.python.org/3/whatsnew/2.5.html#pep-342-new-generator-features"
+"17","1","Что выведет следующий код и почему?
+numbers = [10, 20, 30, 40, 50]
+filtered_numbers = []
+for number in numbers:
+    if number > 25:
+        filtered_numbers.append(number)
+
+print(filtered_numbers)","2","https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+"18","1","Какой порядок вывода напечатает следующий код и почему?
+
+def decorator(tag):
+    def wrap(func):
+        def inner(*args, **kwargs):
+            print(f'start {tag}')
+            result = func(*args, **kwargs)
+            print(f'end {tag}')
+            return result
+        return inner
+    return wrap
+
+@decorator('A')
+@decorator('B')
+def greet():
+    print('greet')
+
+greet()","4","https://docs.python.org/3/reference/compound_stmts.html#function-definitions"
+"19","1","Что выведет следующий код и почему?
+my_string = ""Hello, World!""
+print(my_string[7:12])","2","https://docs.python.org/3/tutorial/introduction.html#text"
+"20","1","Что будет напечатано в результате выполнения следующего кода Python?
+
+def greet(name, greeting=""Hello""):
+    print(f""{greeting}, {name}!"")
+
+greet(""Alice"")
+greet(""Bob"", ""Hi"")","2","https://docs.python.org/3/tutorial/controlflow.html#default-argument-values"
+"21","1","Что напечатает следующий код и почему?
+
+    def outer():
+        x = 5
+        def inner():
+            nonlocal x
+            x += 1
+            return x
+        return inner
+
+    f = outer()
+    print(f())
+    print(f())","3","https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement"
+"22","1","Что выведет следующий код и почему?
+
+    x = [1, 2, 3]
+    print(len(x))","1","https://docs.python.org/3/library/functions.html#len"
+"23","1","Что выведет следующий код и почему?
+
+    a = 7
+    b = 2
+    print(a // b)","1","https://docs.python.org/3/library/functions.html#divmod"
+"24","1","Что выведет следующий код и почему?
+
+    x = 10
+    y = x
+    x = 5
+    print(y)","1","https://docs.python.org/3/glossary.html#term-immutable"
+"25","1","Что выведет следующий код и почему?
+
+    import asyncio, time
+
+    async def sleeper():
+        time.sleep(1)
+        return 'done'
+
+    async def main():
+        start = time.time()
+        await asyncio.gather(*(sleeper() for _ in range(5)))
+        print(round(time.time() - start))
+
+    await main()","5","https://docs.python.org/3/library/asyncio-task.html#running-in-threads"
+"26","1","Какой вывод напечатает следующий код и почему?
+
+    import asyncio, time
+
+    def cpu_bound():
+        s = 0
+        for _ in range(10 ** 8):
+            s += 1
+        return s
+
+    async def main():
+        loop = asyncio.get_running_loop()
+        start = time.time()
+        await asyncio.gather(*(loop.run_in_executor(None, cpu_bound) for _ in range(2)))
+        print(round(time.time() - start) >= 2)
+
+    await main()","5","https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.run_in_executor"
+"27","1","Что напечатает следующий код и почему?
+
+    funcs = [lambda: i for i in range(3)]
+    print([f() for f in funcs])","3","https://docs.python.org/3/faq/programming.html#why-do-lambdas-defined-in-a-loop-with-different-values-all-return-the-same-result"
+"28","1","Что напечатает следующий код и почему?
+
+    def foo(*args, **kwargs):
+        return len(args), sorted(kwargs.keys())
+
+    print(foo(1, 2, 3, b=4, a=5))","3","https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists"
+"29","1","Что напечатает следующий код и почему?
+
+    import copy
+
+    lst = [[1, 2], [3, 4]]
+    shallow = copy.copy(lst)
+    deep = copy.deepcopy(lst)
+
+    lst[0].append(99)
+    shallow.append([5])
+    shallow[1].append(88)
+
+    print(lst)
+    print(shallow)
+    print(deep)","3","https://docs.python.org/3/library/copy.html#copy.deepcopy"
+"30","1","Что напечатает следующий код и почему?
+```python
+    class RightTriangle:
+        def __init__(self, ab):
+            a, b = ab
+            self.__abc = [*ab, (a ** 2 + b ** 2) ** 0.5]
+
+        def __len__(self):
+            return round(sum(self.__abc))
+
+        def __getitem__(self, index):
+            return self.__abc[index]
+
+        def __repr__(self):
+            return f'RightTriangle {self.__abc}'
+
+    rt = RightTriangle([3, 4])
+    print(len(rt))
+    print(rt[0], rt[1], rt[2])
+    print(rt)
+    rt.__abc = [0, 1, 2]
+    print(rt)```","4","https://docs.python.org/3/reference/datamodel.html#special-method-names"
+"31","1","Что напечатает следующий код и почему?
+
+```pythondef append_zero(lst, n=0):
+    lst.append(n)
+    lst = [42]
+    return lst
+
+nums = [1, 2, 3]
+result = append_zero(nums)
+print(nums, result)```","3","https://docs.python.org/3/faq/programming.html#why-am-i-getting-an-unboundlocalerror-when-the-variable-has-a-value"
+"32","1","Опишите, как Python разрешает область видимости переменной согласно правилу LEGB: в каком порядке пространства имён просматриваются, если внутри функции не объявлены ключевые слова global или nonlocal","3","https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces"
+"33","17","Что такое ранг матрицы?","1","https://mathprofi.ru/rang_matricy.html"
+"34","17","Что такое обратимая матрица?","1","https://mathprofi.ru/kak_naiti_obratnuyu_matricu.html"
+"35","17","Что такое скалярное произведение векторов и как оно вычисляется?","2","https://mathprofi.ru/skaljarnoe_proizvedenie_vektorov.html"
+"36","17","Что такое векторное произведение векторов и как оно вычисляется?","2","https://mathprofi.ru/vektornoe_proizvedenie_vektorov_smeshannoe_proizvedenie.html"
+"37","17","Что такое градиент функции?","1","https://mathprofi.ru/proizvodnaja_po_napravleniju_i_gradient.html"
+"39","17","Что такое производная функции и каковы ее основные свойства?","2","https://mathprofi.ru/opredelenie_proizvodnoi_smysl_proizvodnoi.html"
+"40","17","Вычислите градиент функции f(x, y) = x^y + y^x","3","https://mathprofi.ru/proizvodnaja_po_napravleniju_i_gradient.html"
+"41","17","Что такое детерминант (или определитель) матрицы?","1","https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C"
+"42","17","Рассчитайте детерминант(определитель) матрицы:
+[1 2 3]
+[4 5 6]
+[3 6 9]","3","https://mathprofi.ru/kak_vychislit_opredelitel.html"
+"43","17","Что такое собственные значения и собственные векторы матрицы?","1","https://mathprofi.ru/sobstvennye_znachenija_i_sobstvennye_vektory.html"
+"45","17","Что такое интеграл и каковы его основные свойства? Укажите определение интеграла и перечислите его ключевые свойства","2","https://mathprofi.ru/chto_takoe_integral_teorija_dlja_chainikov.html"
+"46","17","Что такое линейная зависимость и линейная независимость векторов? Рассматривается система v1,...,vk размера n над R; сформулируйте определение","1","https://mathprofi.ru/linejnaja_nezavisimost_vektorov_bazis_vektorov.html"
+"47","18","Что такое случайная величина? Приведите корректное определение и хотя бы один пример","1","https://mathprofi.ru/sluchainaya_velichina.html"
+"48","18","В чем отличие между дискретными и непрерывными случайными величинами? Укажите корректные определения и приведите по одному примеру","1","https://mathprofi.ru/sluchainaya_velichina.html"
+"49","3","Чем Series отличается от DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.Series.html"
+"50","3","Как создать DataFrame из словаря вида {'A':[1,2], 'B':[3,4]}?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html"
+"51","3","Как прочитать CSV-файл и загрузить его в DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"
+"52","3","Как корректно прочитать CSV-файл, где второй столбец содержит даты, а также ограничить чтение только первыми 100 строками?","1","https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"
+"53","3","Как записать DataFrame в CSV-файл без сохранения индекса?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html"
+"54","3","Как вывести первые 5 строк DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.head.html"
+"55","3","Как вывести информацию о структуре DataFrame (типы данных, количество ненулевых значений, память)?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html"
+"56","3","Как получить описательную статистику по числовым данным в DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html"
+"57","3","Как получить список названий колонок у DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.columns.html"
+"58","3","Как переименовать колонку DataFrame с 'old' на 'new'?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html"
+"59","3","Как преобразовать все имена колонок DataFrame в нижний регистр?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html"
+"60","3","Как выбрать одну колонку DataFrame с именем 'A'?","1","https://pandas.pydata.org/docs/user_guide/indexing.html#basics"
+"61","3","Как выбрать сразу несколько колонок DataFrame, например 'A' и 'B'?","1","https://pandas.pydata.org/docs/user_guide/indexing.html#basics"
+"62","3","Как изменить порядок колонок DataFrame так, чтобы колонка 'A' оказалась последней, если колонок много?","2","https://stackoverflow.com/questions/13148429/how-to-change-the-order-of-dataframe-columns"
+"63","3","Как выбрать строки временного ряда DataFrame с индексом от '2000-01-01' до '2000-01-07' и одновременно ограничиться колонками 'count_orders' и 'revenue'?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"
+"64","3","Как выбрать строки(наблюдения) с 10-й по 20-ю (включительно) по счету(счет начинается с нуля) и одновременно ограничиться колонками 'feature1', 'feature2', 'target'?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iloc.html"
+"65","3","Как выбрать строки DataFrame, где значения в колонке 'target' больше 20?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"
+"66","3","Как выбрать строки DataFrame, где значения в колонке 'target' больше 20 и одновременно значения в колонке 'weight' больше 100?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"
+"67","3","Как установить колонку 'A' индексом в DataFrame, если вы готовите данные для модели как DS/ML Engineer? Укажите параметры, которые помогут контролировать поведение метода.","3","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html"
+"68","3","Как сбросить индекс в DataFrame? Укажите параметры, которые целесообразно использовать в реальной работе DS/ML Engineer. В каких случаях сброс индекса бывает необходим? (например: после фильтрации строк, при конкатенации нескольких DataFrame, после groupby для получения «плоской» таблицы).","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reset_index.html"
+"69","3","Как отсортировать строки DataFrame по индексу?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_index.html"
+"70","3","Как отсортировать строки DataFrame по значениям в колонке 'A'?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sort_values.html"
+"71","3","Как подсчитать количество пропусков в каждом столбце DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isnull.html"
+"72","3","Как заполнить пропуски в колонке 'A' средним значением этой же колонки в том числе в pandas 2.x и выше?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html"
+"73","3","Как заполнить нулями пропуски в колонке 'A' только для строк, где 'target' равно 0?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html"
+"74","3","Как удалить строки с пропущенными значениями (NaN) из DataFrame?","1","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html"
+"75","3","Как заменить строковые значения 'True' и 'False' в колонке 'A' на 1 и 0?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.replace.html"
+"76","3","В колонке 'text' записаны строки. Как создать новую колонку 'len' с длиной каждой строки для pandas 2.x и выше?","2","https://pandas.pydata.org/docs/reference/api/pandas.Series.str.len.html"
+"77","3","Как посчитать среднее значение по колонке 'A' только для тех строк, где 'target' равен 1?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mean.html"
+"78","3","Как вычислить средний возраст ('age') по колонке 'education' только для строк, где 'default' == 0?","2","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html"
+"79","3","Как сгруппировать данные по колонке 'married' и вычислить минимальную, среднюю и максимальную зарплату ('sallary') только для строк, где 'default' == 1?","3","https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.DataFrameGroupBy.agg.html"
+"80","3","Как посчитать количество уникальных значений в колонке 'education'?","1","https://pandas.pydata.org/docs/reference/api/pandas.Series.nunique.html"
+"81","3","Как получить распределение значений в колонке 'city' в процентах?","1","https://pandas.pydata.org/docs/reference/api/pandas.Series.value_counts.html"
+"82","3","Как объединить два DataFrame вертикально, добавив строки второго к первому?","2","https://pandas.pydata.org/docs/reference/api/pandas.concat.html"
+"83","3","Вы построили модель, предварительно собрав данные из нескольких источников через Pandas merge. После переноса пайплайна в Spark SQL результаты модели изменились. Одно из различий: в Pandas 5% строк имеют 'лишние' матчинг-и, а в Spark их нет. В чём может быть причина?","4","https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html"
+"84","3","Как объединить два больших DataFrame по ближайшему предшествующему timestamp с разной частотой (минуты vs секунды) и разными time zone (UTC vs Europe/Belgrade), избежав переполнения памяти?","5","https://pandas.pydata.org/docs/reference/api/pandas.merge_asof.html"
